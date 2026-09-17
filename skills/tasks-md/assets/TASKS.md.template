@@ -1,0 +1,22 @@
+# TASKS.md
+
+## Requirements [0/0]
+
+  States: OPEN | BUILT(!evidence) DEFAULTED(@the default you chose) DECLARED(@what only the user can supply)
+
+## Done
+
+YYYY-MM-DD HH:mm UTC - Ledger ready - example entry, copy this shape
+  - [changed] TASKS.md seeded with its Requirements, Done and Knowledge sections, so the next turn reads state instead of re-deriving it.
+  - [where] At the repository root, one dated entry per milestone or edit, newest first, so the freshest state is read first.
+  - [next] File your own entry here when a build phase or an edit lands, because a context reset keeps only what was written down.
+
+## Knowledge
+
+YYYY-MM-DD HH:mm UTC - Ledger conventions - example entry
+  - Durable ids: link each record, agent and job by name so a later turn never re-derives them.
+  - Decisions: one line with the reason ("win rate is a number field, not text in the row title, so the chart can read it").
+  - Learnings: whatever cost you a retry, written so the next turn does not repeat it.
+  - The Requirements section carries a States line and a [n/N] cookie - the file teaches its own vocabulary, so a turn with no memory of these instructions still reads it right.
+  - One fact per bullet, and update the bullet you already have instead of adding a second one about the same thing.
+  - When work proves a bullet here wrong, correct or delete that bullet in the same turn - a stale fact costs the next turn more than a missing one.
