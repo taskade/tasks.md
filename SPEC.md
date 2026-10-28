@@ -267,7 +267,7 @@ This is version 1.0. A change to the section list, the `States:` line or the sta
 
 The interchange format is the Markdown file in sections 3 through 8. A harness may also keep that same ledger as a tree. The projection is optional. A file that never leaves Markdown still conforms.
 
-- Each section is one node. Each bullet under it is a child of that node. Nesting in the file is nesting in the tree. Nothing is copied to get a second shape.
+- Each section is one node. Each top-level item under it is a child of that node: a Requirements bullet, or a dated entry in `Done` or `Knowledge`. A dated entry is itself a node, and the bullets beneath its title are its children, not the section's. Every bullet attaches to its immediate parent, so nesting in the file is nesting in the tree. Nothing is copied to get a second shape.
 - The state token on a Requirements bullet (`OPEN`, `BUILT`, `DEFAULTED`, `DECLARED`) is a field on that node, parsed from the bullet. A harness may filter, board, or chart by that field. The bullet text stays the source.
 - List, outline, board, and table are views of one tree. They are not four copies.
 - A person, an agent, an automation, and a generated interface write through one commit path into that tree. There is no second document to drift.
