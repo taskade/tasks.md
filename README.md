@@ -4,7 +4,7 @@
 
 Most files named `tasks.md` are plans: a queue of what an agent must do next. TASKS.md is the other half. It is the ledger an agent keeps of what was asked, what was decided and excluded, what was built with evidence, and what it learned. The next session, or the next agent from any vendor, starts where this one stopped. AGENTS.md says how to work. TASKS.md says what happened.
 
-Reference implementation: [Taskade](https://www.taskade.com) has run this format in production since July 2026. Its builder seeds a ledger into each workspace it creates, and a partial unique index in the database makes a second one impossible rather than merely discouraged. The two halves are separate: the seed puts the file there, the constraint keeps a duplicate from ever being written beside it. The format is described here as it is actually enforced, not as it was imagined.
+Reference implementation: [Taskade](https://www.taskade.com) has run this format in production since July 2026. Its builder seeds a ledger into each workspace it creates, and a partial unique index in the database makes a second one impossible rather than merely discouraged. The two halves are separate: the seed puts the file there, the constraint keeps a duplicate from ever being written beside it. The format is described here as it is actually enforced, not as it was imagined. Clone a live kit: [taskade.com/apps/categories](https://www.taskade.com/apps/categories).
 
 A queue that shrinks to the remaining work cannot tell you what was asked. When the work ends, the closing pass has nothing to check its claims against. The ledger keeps the request, the decisions and the evidence in one file that outlives the conversation.
 
