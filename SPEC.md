@@ -262,3 +262,15 @@ A harness conforms when it holds one ledger per body of work, never writes the m
 ## 12. Versioning
 
 This is version 1.0. A change to the section list, the `States:` line or the stamp grammar is a new major version and gets its own dated directory. A change to prose only is a patch.
+
+## 13. Optional tree projection
+
+The interchange format is the Markdown file in sections 3 through 8. A harness may also keep that same ledger as a tree. The projection is optional. A file that never leaves Markdown still conforms.
+
+- Each section is one node. Each top-level item under it is a child of that node: a Requirements bullet, or a dated entry in `Done` or `Knowledge`. A dated entry is itself a node, and the bullets beneath its title are its children, not the section's. Every bullet attaches to its immediate parent, so nesting in the file is nesting in the tree. Nothing is copied to get a second shape.
+- The state token on a Requirements bullet (`OPEN`, `BUILT`, `DEFAULTED`, `DECLARED`) is a field on that node, parsed from the bullet. A harness may filter, board, or chart by that field. The bullet text stays the source.
+- List, outline, board, and table are views of one tree. They are not four copies.
+- A person, an agent, an automation, and a generated interface write through one commit path into that tree. There is no second document to drift.
+- YAML or JSON is a projection of the tree, not a second spec. A projection conforms only when it round-trips to the Markdown grammar in this document: same sections, same `States:` line, same stamps, no credential values.
+
+A harness that stores the tree must still be able to render the Markdown file. Conformance is judged on that file, not on the projection.

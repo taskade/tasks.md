@@ -1,4 +1,23 @@
-# TASKS.md
+<p align="center">
+  <img src="./assets/social-preview.png" alt="TASKS.md" width="640">
+</p>
+
+<h1 align="center">TASKS.md</h1>
+
+<p align="center">
+  <a href="./SPEC.md"><img src="https://img.shields.io/badge/spec-TASKS.md-111?style=flat-square" alt="Spec"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square" alt="License: Apache-2.0"></a>
+  <a href="./skills/tasks-md/"><img src="https://img.shields.io/badge/agent%20skill-npx%20skills%20add-8a2be2?style=flat-square" alt="Agent Skill"></a>
+  <a href="https://github.com/taskade/tasks.md/stargazers"><img src="https://img.shields.io/github/stars/taskade/tasks.md?style=flat-square" alt="GitHub stars"></a>
+</p>
+
+<p align="center">
+  <a href="./SPEC.md">Spec</a> ·
+  <a href="./EXAMPLES/">Examples</a> ·
+  <a href="./skills/tasks-md/">Skill</a> ·
+  <a href="./REFERENCE.md">Reference implementation</a> ·
+  <a href="./PHILOSOPHY.md">Philosophy</a>
+</p>
 
 **The build ledger a coding agent keeps.** Agents write a file by this name into repositories constantly, and the ones that do share a filename and nothing else. Every convention around it, from memory banks to spec kits to handoff notes, marks work done with a checkbox or a sentence. None of them requires the agent to hold evidence first. That is what this format adds.
 
@@ -34,6 +53,24 @@ Six sections in a fixed order. The first four are the map: live state, edited in
 | Requirements | map | One bullet per clause of the request, with its state annotated in place. |
 | Done | log | Completed work, one dated entry per milestone or edit, newest first. |
 | Knowledge | log | Durable facts: ids, decisions, learnings. One fact per bullet. |
+
+```
+ TASKS.md
+ ├── Destination       ┐
+ ├── Open decisions    │  map: live state, edited in place
+ ├── Out of scope      │
+ ├── Requirements      ┘  OPEN ──evidence──▶ BUILT · DEFAULTED · DECLARED
+ ├── Done              ┐
+ └── Knowledge         ┘  log: dated entries, newest first
+```
+
+One session, start to finish:
+
+```
+ request ──▶ file every clause as OPEN ──▶ build ──▶ observe the outcome
+                                                         │
+     next session resumes here ◀── log Done + Knowledge ◀┘ record evidence, close clause
+```
 
 A small edit updates only the log. Chart the map when the work spans more than a turn or two, or when losing the goal is expensive.
 
@@ -78,7 +115,13 @@ The skill teaches an agent to create the file when it is missing, to file the cl
 
 ## Using it with a workspace
 
-A ledger stays a file and stays useful as one. When it lives in a workspace instead, the Requirements block stops being a list you read and becomes a field you can filter, chart and act on. See [REFERENCE.md](./REFERENCE.md) for what that looks like, and [taskade/skills](https://github.com/taskade/skills) for the reader that performs the conversion.
+A ledger stays a file and stays useful as one. A harness may also keep that same file as a tree of nodes, with the requirement state as a field, and render it as a list, a board, or a table. YAML is a projection of that tree, not a second format. See [SPEC.md](./SPEC.md) section 13 and [REFERENCE.md](./REFERENCE.md).
+
+<p align="center">
+  <img src="https://www.taskade.com/static_images/blog/taskade-project-views.gif" alt="One ledger tree rendered as a list, a board, a mind map and an org chart" width="640">
+</p>
+
+See it running: [Taskade Genesis apps](https://www.taskade.com/apps) each seed a ledger. Browse them by [category](https://www.taskade.com/apps/categories), or the community list at [awesome-vibe-coding](https://github.com/taskade/awesome-vibe-coding).
 
 ## Related formats
 
