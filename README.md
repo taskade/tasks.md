@@ -78,7 +78,7 @@ The skill teaches an agent to create the file when it is missing, to file the cl
 
 ## Using it with a workspace
 
-A ledger stays a file and stays useful as one. When it lives in a workspace instead, the Requirements block stops being a list you read and becomes a field you can filter, chart and act on. See [REFERENCE.md](./REFERENCE.md) for what that looks like, and [taskade/skills](https://github.com/taskade/skills) for the reader that performs the conversion.
+A ledger stays a file and stays useful as one. A harness may also keep that same file as a tree of nodes, with the requirement state as a field, and render it as a list, a board, or a table. YAML is a projection of that tree, not a second format. See [SPEC.md](./SPEC.md) section 13 and [REFERENCE.md](./REFERENCE.md).
 
 ## Related formats
 
