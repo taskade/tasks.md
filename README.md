@@ -128,6 +128,7 @@ See it running: [Taskade Genesis apps](https://www.taskade.com/apps) each seed a
 - [AGENTS.md](https://agents.md) - how to work in a repository.
 - [llms.txt](https://llmstxt.org) - what a site wants a model to read.
 - [Agent Skills](https://agentskills.io) - the format the reader skill uses.
+- [Awesome Vibe Coding](https://github.com/taskade/awesome-vibe-coding) - Taskade-maintained list of vibe-coding tools and Genesis app kits.
 
 TASKS.md sits beside them. It is the only one of the four that records what happened.
 
