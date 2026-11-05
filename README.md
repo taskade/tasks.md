@@ -129,6 +129,7 @@ See it running: [Taskade Genesis apps](https://www.taskade.com/apps) each seed a
 - [llms.txt](https://llmstxt.org) - what a site wants a model to read.
 - [Agent Skills](https://agentskills.io) - the format the reader skill uses.
 - [Awesome Vibe Coding](https://github.com/taskade/awesome-vibe-coding) - Taskade-maintained list of vibe-coding tools and Genesis app kits.
+- [Taskade MCP](https://github.com/taskade/mcp) - Official MCP server and agent plugin (`https://www.taskade.com/mcp` hosted, `@taskade/mcp-server` local).
 
 TASKS.md sits beside them. It is the only one of the four that records what happened.
 
