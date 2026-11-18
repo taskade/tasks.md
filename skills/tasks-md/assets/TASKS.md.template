@@ -1,0 +1,22 @@
+# TASKS.md
+
+## Requirements [0/0]
+
+  States: OPEN | BUILT(!evidence) DEFAULTED(@the default you chose) DECLARED(@what only the user can supply)
+
+## Done
+
+YYYY-MM-DD HH:mm UTC - Ledger created - sample entry, follow this form
+  - What changed: created TASKS.md with Requirements, Done and Knowledge, so a later session reads the state here and does not work it out again.
+  - Where it lives: TASKS.md at the repository root. One dated entry per milestone or edit, newest entry on top.
+  - Next: add an entry here each time a build step or an edit lands. After a context reset, only what is written here remains.
+
+## Knowledge
+
+YYYY-MM-DD HH:mm UTC - How to use this section - sample entry
+  - Identifiers: link each record, agent and job by name, so a later session does not look them up again.
+  - Decisions: one line each, with the reason ("price is a number field, not text, so the totals can add it up").
+  - Lessons: anything that took more than one attempt, so the next session gets it right the first time.
+  - The States line and the [n/N] count in Requirements explain the format inside the file, for a reader who never saw these instructions.
+  - One fact per bullet. If a fact changes, edit its bullet. Do not add a second bullet about the same thing.
+  - If work proves a bullet wrong, fix or delete it in the same session. A wrong fact costs more than a missing one.
